@@ -4,7 +4,7 @@ Theme URI: https://github.com/ennono/checkoff-elementor-child
 Description: Child theme of Hello Elementor for sites built around the CheckOff plugin. Takes the checklists' colours and fonts from the Elementor global styles and adds a page template for the checklist page.
 Author: Timo Fricke
 Template: hello-elementor
-Version: 1.0.0
+Version: 1.0.1
 Requires at least: 6.0
 Tested up to: 7.1
 Requires PHP: 8.0
@@ -28,7 +28,11 @@ Domain Path: /languages
 body.cko-theme .cko-app,
 body.cko-theme .cko-create,
 body.cko-theme .cko-open,
-body.cko-theme .cko-recent {
+body.cko-theme .cko-recent,
+body.cko-theme .cko-templates,
+body.cko-theme .cko-menu,
+body.cko-theme .cko-toasts,
+body.cko-theme .cko-dialog {
 	--cko-accent: var(--e-global-color-primary, #2271b1);
 	--cko-accent-contrast: #fff;
 	--cko-done: var(--e-global-color-accent, #2e9e4f);
