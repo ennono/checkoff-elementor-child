@@ -1,0 +1,35 @@
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: CheckOff Elementor Child 1.0.0\n"
+"POT-Creation-Date: 2026-11-06 08:52+0000\n"
+"PO-Revision-Date: 2026-11-06 08:52+0000\n"
+"Language: de_DE\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+"X-Domain: checkoff-elementor-child\n"
+
+#. Theme Name of the theme
+#: style.css
+msgid "CheckOff Elementor Child"
+msgstr "CheckOff Elementor Child"
+
+#. Description of the theme
+#: style.css
+msgid "Child theme of Hello Elementor for sites built around the CheckOff plugin. Takes the checklists' colours and fonts from the Elementor global styles and adds a page template for the checklist page."
+msgstr "Child-Theme von Hello Elementor für Websites rund um das Plugin CheckOff. Übernimmt Farben und Schriften der Checklisten aus den globalen Elementor-Stilen und bringt ein Seiten-Template für die Checklisten-Seite mit."
+
+#. Template Name of the theme
+#: page-templates/checkoff-app.php
+msgid "CheckOff checklist"
+msgstr "CheckOff-Checkliste"
+
+#: functions.php
+msgid "The theme \"CheckOff Elementor Child\" is made for the CheckOff plugin. Please install and activate CheckOff."
+msgstr "Das Theme „CheckOff Elementor Child“ ist für das Plugin CheckOff gemacht. Bitte installiere und aktiviere CheckOff."
+
+#: page-templates/checkoff-app.php
+msgid "The CheckOff plugin is not active."
+msgstr "Das Plugin CheckOff ist nicht aktiv."

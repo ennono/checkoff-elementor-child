@@ -1,0 +1,96 @@
+/*
+Theme Name: CheckOff Elementor Child
+Theme URI: https://github.com/ennono/checkoff-elementor-child
+Description: Child theme of Hello Elementor for sites built around the CheckOff plugin. Takes the checklists' colours and fonts from the Elementor global styles and adds a page template for the checklist page.
+Author: Timo Fricke
+Template: hello-elementor
+Version: 1.0.0
+Requires at least: 6.0
+Tested up to: 7.1
+Requires PHP: 8.0
+License: GNU General Public License v2 or later
+License URI: https://www.gnu.org/licenses/gpl-2.0.html
+Text Domain: checkoff-elementor-child
+Domain Path: /languages
+*/
+
+/*
+ * CheckOff reads every colour, radius and spacing from custom properties
+ * on .cko-app (see the plugin's frontend.css). This theme only sets those
+ * properties — from the Elementor kit's global colours and fonts where the
+ * site defines them, with the plugin's defaults as fallback — and leaves the
+ * plugin's rules alone.
+ *
+ * The body class raises the specificity above the plugin's own declaration,
+ * because the plugin's stylesheet is enqueued by its shortcodes and therefore
+ * printed after this one.
+ */
+body.cko-theme .cko-app,
+body.cko-theme .cko-create,
+body.cko-theme .cko-open,
+body.cko-theme .cko-recent {
+	--cko-accent: var(--e-global-color-primary, #2271b1);
+	--cko-accent-contrast: #fff;
+	--cko-done: var(--e-global-color-accent, #2e9e4f);
+	--cko-radius: 10px;
+	--cko-control: 2.5rem;
+
+	font-family: var(--e-global-typography-text-font-family, inherit), sans-serif;
+}
+
+body.cko-theme .cko-app h2,
+body.cko-theme .cko-app h3,
+body.cko-theme .cko-app h4,
+body.cko-theme .cko-create__title,
+body.cko-theme .cko-open__title,
+body.cko-theme .cko-recent__title {
+	font-family: var(--e-global-typography-primary-font-family, inherit), sans-serif;
+}
+
+/* Hello Elementor styles buttons by element; keep CheckOff's own look. */
+body.cko-theme .cko-app button,
+body.cko-theme .cko-create button,
+body.cko-theme .cko-open button,
+body.cko-theme .cko-recent button {
+	text-transform: none;
+	letter-spacing: normal;
+}
+
+body.cko-theme .cko-button--primary:hover,
+body.cko-theme .cko-button--primary:focus-visible {
+	filter: brightness(1.1);
+}
+
+/* ---------- page template "CheckOff checklist" ---------- */
+
+.cko-page .page-content {
+	display: flex;
+	flex-direction: column;
+	gap: 2rem;
+}
+
+/* On the overview the three forms sit side by side where there is room. */
+@media (min-width: 900px) {
+	.cko-page .cko-app:not(.cko-checklist) {
+		display: grid;
+		grid-template-columns: repeat(2, minmax(0, 1fr));
+		gap: 2rem;
+		align-items: start;
+	}
+
+	.cko-page .cko-app:not(.cko-checklist) > .cko-create {
+		grid-row: span 2;
+	}
+}
+
+.cko-page .cko-create,
+.cko-page .cko-open,
+.cko-page .cko-recent {
+	padding: 1.25rem 1.5rem;
+	border: 1px solid var(--cko-border);
+	border-radius: var(--cko-radius);
+}
+
+.cko-page .cko-recent[hidden] {
+	display: none;
+}
