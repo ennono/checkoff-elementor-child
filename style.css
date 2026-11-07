@@ -21,6 +21,8 @@ Domain Path: /languages
  * site defines them, with the plugin's defaults as fallback — and leaves the
  * plugin's rules alone.
  *
+ * Which colour goes where, in plain words: README.md, "Colours and fonts".
+ *
  * The body class raises the specificity above the plugin's own declaration,
  * because the plugin's stylesheet is enqueued by its shortcodes and therefore
  * printed after this one.
