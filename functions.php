@@ -17,7 +17,7 @@ if ( ! defined( 'ABSPATH' ) ) {
 	exit;
 }
 
-define( 'CKO_CHILD_VERSION', '1.0.1' );
+define( 'CKO_CHILD_VERSION', '1.1.0' );
 
 /**
  * Loads the theme's translations.

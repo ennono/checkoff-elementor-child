@@ -10,8 +10,8 @@ A deliberately small child theme of **Hello Elementor** (`Template: hello-elemen
 
 The plugin renders and computes; the theme only decides how it looks and where it stands — the same split as MixMyMeals and its child theme.
 
-- **Styling goes through CheckOff's custom properties** (`--cko-accent`, `--cko-done`, `--cko-radius`, …), not by overriding the plugin's rules. They are set in `style.css` under `body.cko-theme …`: the plugin's stylesheet is enqueued by its shortcodes and printed after the theme's, so the body class is what lets the theme's values win.
-- Colours and fonts come from the Elementor kit's global variables (`--e-global-color-*`, `--e-global-typography-*`) with the plugin's defaults as fallback, so a site restyles checklists in Elementor's Site Settings.
+- **Colours, fonts and corners are the plugin's** (CheckOff → Settings → Design, since CheckOff 3.5.0, which also maps the Elementor kit's global colours and fonts). The theme sets **no** `--cko-*` design variable: its `body.cko-theme` selector is stronger than the plugin's inline settings and would silently override them — that is why the mapping was removed in 1.1.0.
+- What the theme still styles goes under `body.cko-theme …` (the plugin's stylesheet is printed after the theme's): Hello Elementor's button styles kept off the checklists, and the page template's layout.
 - Hello Elementor does not enqueue its own `style.css`; the child depends on the handle `hello-elementor-theme-style`.
 
 ## Files

@@ -1,8 +1,8 @@
 #
 msgid ""
 msgstr ""
-"Project-Id-Version: CheckOff Elementor Child 1.0.0\n"
-"POT-Creation-Date: 2026-11-06 08:52+0000\n"
+"Project-Id-Version: CheckOff Elementor Child 1.1.0\n"
+"POT-Creation-Date: 2026-11-09 10:33+0000\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
@@ -15,7 +15,7 @@ msgstr ""
 
 #. Description of the theme
 #: style.css
-msgid "Child theme of Hello Elementor for sites built around the CheckOff plugin. Takes the checklists' colours and fonts from the Elementor global styles and adds a page template for the checklist page."
+msgid "Child theme of Hello Elementor for sites built around the CheckOff plugin. Adds a page template for the checklist page and keeps Hello Elementor's button styles off the checklists; colours and fonts come from CheckOff's design settings, which follow the Elementor kit."
 msgstr ""
 
 #. Template Name of the theme

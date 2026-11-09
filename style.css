@@ -1,10 +1,10 @@
 /*
 Theme Name: CheckOff Elementor Child
 Theme URI: https://github.com/ennono/checkoff-elementor-child
-Description: Child theme of Hello Elementor for sites built around the CheckOff plugin. Takes the checklists' colours and fonts from the Elementor global styles and adds a page template for the checklist page.
+Description: Child theme of Hello Elementor for sites built around the CheckOff plugin. Adds a page template for the checklist page and keeps Hello Elementor's button styles off the checklists; colours and fonts come from CheckOff's design settings, which follow the Elementor kit.
 Author: Timo Fricke
 Template: hello-elementor
-Version: 1.0.1
+Version: 1.1.0
 Requires at least: 6.0
 Tested up to: 7.1
 Requires PHP: 8.0
@@ -15,43 +15,16 @@ Domain Path: /languages
 */
 
 /*
- * CheckOff reads every colour, radius and spacing from custom properties
- * on .cko-app (see the plugin's frontend.css). This theme only sets those
- * properties — from the Elementor kit's global colours and fonts where the
- * site defines them, with the plugin's defaults as fallback — and leaves the
- * plugin's rules alone.
+ * Colours, fonts and corners of the checklists are not set here any more:
+ * CheckOff (3.5.0 and later) takes them from its own settings
+ * (CheckOff → Settings → Design) and, with Elementor active, from the
+ * Elementor kit's global colours and fonts. A value set here would win over
+ * those settings and make them look broken.
  *
- * Which colour goes where, in plain words: README.md, "Colours and fonts".
- *
- * The body class raises the specificity above the plugin's own declaration,
+ * The body class raises the specificity above the plugin's own rules,
  * because the plugin's stylesheet is enqueued by its shortcodes and therefore
  * printed after this one.
  */
-body.cko-theme .cko-app,
-body.cko-theme .cko-create,
-body.cko-theme .cko-open,
-body.cko-theme .cko-recent,
-body.cko-theme .cko-templates,
-body.cko-theme .cko-menu,
-body.cko-theme .cko-toasts,
-body.cko-theme .cko-dialog {
-	--cko-accent: var(--e-global-color-primary, #2271b1);
-	--cko-accent-contrast: #fff;
-	--cko-done: var(--e-global-color-accent, #2e9e4f);
-	--cko-radius: 10px;
-	--cko-control: 2.5rem;
-
-	font-family: var(--e-global-typography-text-font-family, inherit), sans-serif;
-}
-
-body.cko-theme .cko-app h2,
-body.cko-theme .cko-app h3,
-body.cko-theme .cko-app h4,
-body.cko-theme .cko-create__title,
-body.cko-theme .cko-open__title,
-body.cko-theme .cko-recent__title {
-	font-family: var(--e-global-typography-primary-font-family, inherit), sans-serif;
-}
 
 /* Hello Elementor styles buttons by element; keep CheckOff's own look. */
 body.cko-theme .cko-app button,
